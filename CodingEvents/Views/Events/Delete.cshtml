@@ -1,0 +1,16 @@
+﻿<h1>Delete Events</h1>
+
+@*no action attribute so this will post to delete/event*@
+<form method="post">
+    @foreach(var evt in ViewBag.events)
+    {
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="eventIds" value="@evt.Id" />
+                <span>@evt.Name</span>
+            </label>
+        </div>
+    }
+
+    <input type="submit" value="Delete event" class="btn btn-danger" />
+</form>
