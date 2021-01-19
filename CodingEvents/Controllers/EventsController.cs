@@ -38,7 +38,8 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
             Event newEvent = new Event
             {                                                           // directly assign properties
                 Name = addEventViewModel.Name,
-                Description = addEventViewModel.Description
+                Description = addEventViewModel.Description,
+                ContactEmail = addEventViewModel.ContactEmail
             };                                          
             EventData.Add(newEvent);
 

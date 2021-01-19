@@ -6,17 +6,30 @@
 
 <form method="post">
     <div asp-controller="Events" asp-action="Add" class="form-group">
-        <label asp-for="Name">                                      @*using uppercase referring to the property*@
-            Name of Event:
+        <label asp-for="Name">
+            @*using uppercase referring to the property*@
+            Name of event:
+            <br />
             <input asp-for="Name" />
         </label>
     </div>
+    
     <div class="form-group">
         <label asp-for="Description">
             Description:
-            <input type="text" asp-for="Description" />
+            <br />
+            <input asp-for="Description" />
         </label>
     </div>
+
+    <div class="form-group">
+        <label asp-for="ContactEmail">
+            Contact email (optional):
+            <br />
+            <input type="email" asp-for="ContactEmail" />
+        </label>
+    </div>
+
     <input type="submit" value="Add Event" class="btn btn-secondary" />
 </form>
 
