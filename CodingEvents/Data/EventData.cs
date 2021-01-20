@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CodingEvents.Models;
 
-namespace CodingEvents.Data
+namespace CodingEvents.Data                                 // mocking a database
 {
     public class EventData
     {

@@ -33,17 +33,23 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
         }
 
         [HttpPost]  //annotations, request type attribute
-        public IActionResult Add(AddEventViewModel addEventViewModel)
+        public IActionResult Add(AddEventViewModel addEventViewModel)       // ViewModel
         {
-            Event newEvent = new Event
-            {                                                           // directly assign properties
-                Name = addEventViewModel.Name,
-                Description = addEventViewModel.Description,
-                ContactEmail = addEventViewModel.ContactEmail
-            };                                          
-            EventData.Add(newEvent);
+            if(ModelState.IsValid)
+            {
+                Event newEvent = new Event
+                {                                                           // directly assign properties to Event Model using ViewModel
+                    Name = addEventViewModel.Name,
+                    Description = addEventViewModel.Description,
+                    ContactEmail = addEventViewModel.ContactEmail
+                };
 
-            return Redirect("/Events");
+                EventData.Add(newEvent);
+
+                return Redirect("/Events");
+            }
+
+            return View(addEventViewModel);
         }
 
         public IActionResult Delete()

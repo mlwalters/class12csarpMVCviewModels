@@ -2,13 +2,16 @@
 
 @model AddEventViewModel
 
+@*Or @model CodingEvents.ViewModels.AddEventViewModel;*@ 
+
 <h1>Add Event</h1>
 
-<form method="post">
-    <div asp-controller="Events" asp-action="Add" class="form-group">
+<form method="post" asp-controller="Events" asp-action="Add" >
+    <div class="form-group">
         <label asp-for="Name">
             @*using uppercase referring to the property*@
             Name of event:
+            <span asp-validation-for="Name" class="text-warning font-italic"></span>
             <br />
             <input asp-for="Name" />
         </label>
@@ -17,6 +20,7 @@
     <div class="form-group">
         <label asp-for="Description">
             Description:
+            <span asp-validation-for="Description" class="text-warning font-italic"></span>
             <br />
             <input asp-for="Description" />
         </label>
@@ -25,6 +29,7 @@
     <div class="form-group">
         <label asp-for="ContactEmail">
             Contact email (optional):
+            <span asp-validation-for="ContactEmail" class="text-warning font-italic"></span>
             <br />
             <input type="email" asp-for="ContactEmail" />
         </label>

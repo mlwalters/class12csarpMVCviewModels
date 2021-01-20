@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;            // viewmodel library
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,7 +16,7 @@ namespace CodingEvents.ViewModels
         [StringLength(500, ErrorMessage = "Description can't be longer than 500 characters.")]
         public string Description { get; set; }
 
-        [EmailAddress]
+        [EmailAddress]                                  // validation attributes
         public string ContactEmail { get; set; }
 
     }
