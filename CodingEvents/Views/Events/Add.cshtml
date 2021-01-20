@@ -53,6 +53,15 @@
         </label>
     </div>
 
+    <div class="form-group">
+        <label asp-for="Type">
+            Event type:
+            @*<span asp-validation-for="ContactEmail" class="text-warning font-italic"></span>*@
+            <br />
+            <select asp-for="Type" asp-items="Model.EventTypes"></select>
+        </label>
+    </div>
+
     <input type="submit" value="Add Event" class="btn btn-secondary" />
 </form>
 

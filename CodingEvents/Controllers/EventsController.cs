@@ -43,7 +43,8 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
                     Location = addEventViewModel.Location,
                     Description = addEventViewModel.Description,
                     NoOfAttendees = addEventViewModel.NoOfAttendees,
-                    ContactEmail = addEventViewModel.ContactEmail
+                    ContactEmail = addEventViewModel.ContactEmail,
+                    Type = addEventViewModel.Type
                 };
 
                 EventData.Add(newEvent);
