@@ -23,6 +23,9 @@ namespace CodingEvents.ViewModels
         [Range(0, 100000, ErrorMessage = "Must be between 0 - 100,000.")]
         public int NoOfAttendees { get; set; }
 
+        //[Compare(IsRegistrationRequired, true)]
+        //public bool IsTrue { get { return true; } }
+
         [EmailAddress]                                  // validation attributes
         public string ContactEmail { get; set; } 
     }
