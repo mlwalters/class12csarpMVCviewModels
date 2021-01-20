@@ -40,7 +40,9 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
                 Event newEvent = new Event
                 {                                                           // directly assign properties to Event Model using ViewModel
                     Name = addEventViewModel.Name,
+                    Location = addEventViewModel.Location,
                     Description = addEventViewModel.Description,
+                    NoOfAttendees = addEventViewModel.NoOfAttendees,
                     ContactEmail = addEventViewModel.ContactEmail
                 };
 
@@ -80,11 +82,15 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
 
         [HttpPost]
         [Route("/Events/Edit")]
-        public IActionResult SubmitEditEventForm(int eventId, string name, string description)
+        public IActionResult SubmitEditEventForm(int eventId, string name, string description, string location, int noOfAttendees, string contactEmail)
         {
             Event toBeEdited = EventData.GetById(eventId);
             toBeEdited.Name = name;
             toBeEdited.Description = description;
+            toBeEdited.Location = location;
+            toBeEdited.NoOfAttendees = noOfAttendees;
+            toBeEdited.ContactEmail = contactEmail;
+
             return Redirect("/Events");
         }
     }
