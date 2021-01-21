@@ -92,6 +92,7 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
             toBeEdited.NoOfAttendees = noOfAttendees;
             toBeEdited.ContactEmail = contactEmail;
 
+
             return Redirect("/Events");
         }
     }
