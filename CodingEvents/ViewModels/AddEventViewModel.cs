@@ -22,11 +22,12 @@ namespace CodingEvents.ViewModels
         [StringLength(500, ErrorMessage = "Description can't be longer than 500 characters.")]
         public string Description { get; set; }
 
+        [EmailAddress]                                  // validation attributes
+        public string ContactEmail { get; set; }
+
         [Range(0, 100000, ErrorMessage = "Must be between 0 - 100,000.")]
         public int NoOfAttendees { get; set; }
 
-        //[Compare(IsRegistrationRequired, true)]
-        //public bool IsTrue { get { return true; } }
         public EventType Type { get; set; }
         public List<SelectListItem> EventTypes { get; set; } = new List<SelectListItem>
         {
@@ -36,7 +37,6 @@ namespace CodingEvents.ViewModels
             new SelectListItem(EventType.Social.ToString(), ((int)EventType.Social).ToString()),
         };
  
-        [EmailAddress]                                  // validation attributes
-        public string ContactEmail { get; set; } 
+
     }
 }
