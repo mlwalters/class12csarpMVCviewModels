@@ -12,7 +12,7 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
 {
     public class EventsController : Controller
     {
-
+        // TODO Modify Edit feature
 
         // GET : /<controller>/
         [HttpGet]

@@ -19,10 +19,10 @@ namespace CodingEvents.ViewModels
         public string Location { get; set; }
 
         [Required(ErrorMessage = "Please enter a description.")]
-        [StringLength(500, ErrorMessage = "Description can't be longer than 500 characters.")]
+        [StringLength(500, MinimumLength = 10, ErrorMessage = "Description can't be longer than 500 characters.")]
         public string Description { get; set; }
 
-        [EmailAddress]                                  // validation attributes
+        [EmailAddress]                                  // validation attributes, using client side verification
         public string ContactEmail { get; set; }
 
         [Range(0, 100000, ErrorMessage = "Must be between 0 - 100,000.")]
