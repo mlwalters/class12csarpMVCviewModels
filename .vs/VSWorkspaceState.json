@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CodingEvents"
+    "\\CodingEvents",
+    "\\CodingEvents\\Controllers",
+    "\\CodingEvents\\ViewModels",
+    "\\CodingEvents\\Views",
+    "\\CodingEvents\\Views\\Events"
   ],
-  "SelectedNode": "\\CodingEvents.sln",
+  "SelectedNode": "\\CodingEvents\\Controllers\\EventsController.cs",
   "PreviewInSolutionExplorer": false
 }
